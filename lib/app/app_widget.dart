@@ -9,9 +9,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Uber Clone',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(fontFamily: 'Arial'),
       home: const HomeScreemView(title: 'Uber Clone Home Page'),
     );
   }
