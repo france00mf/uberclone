@@ -1,16 +1,11 @@
 # uberclone
+UBER CLONE
+App para pesquisas e enquetes de carros (Estilo a Ubber's app's). Desenvolvido em flutter.
 
-A new Flutter project.
+## Visita o meu perfil por aí 
 
-## Getting Started
+Linkedin -> https://ao.linkedin.com/in/france-7a8508184?trk=public_profile_browsemap
+Facebook -> https://www.facebook.com/pages/France-Domingos-Jos%C3%A9/101349549477734/?locale=hi_IN
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Copy Right
+France Domingos José, De Angola para o mundo, todos direitos reservados.
