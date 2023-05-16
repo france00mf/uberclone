@@ -1,4 +1,4 @@
-package com.example.uberclone
+package com.reiguedal.uberclone
 
 import io.flutter.embedding.android.FlutterActivity
 
