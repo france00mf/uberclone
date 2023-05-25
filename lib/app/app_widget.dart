@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../screem/screem.dart';
+import '../presenter/screem/screem.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
