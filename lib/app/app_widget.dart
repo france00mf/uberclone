@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../presenter/screem/screem.dart';
+import 'widgets/widgets.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -8,11 +9,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Uber Clone',
+      title: 'Uber Clone BY Angola',
       initialRoute: LoginScreem.page,
-      routes: {},
+      routes: routes,
       theme: ThemeData(fontFamily: 'Arial'),
-      home: const HomeScreemView(title: 'Uber Clone Home Page'),
     );
   }
 }
