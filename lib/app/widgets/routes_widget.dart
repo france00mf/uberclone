@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:uberclone/presenter/screem/auth_screem/register_screem.dart';
 

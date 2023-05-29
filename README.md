@@ -8,4 +8,4 @@ Linkedin -> https://ao.linkedin.com/in/france-7a8508184?trk=public_profile_brows
 Facebook -> https://www.facebook.com/pages/France-Domingos-Jos%C3%A9/101349549477734/?locale=hi_IN
 
 ## Copy Right
-France Domingos José, De Angola 🇦🇴 🇦🇴 para o mundo💗, ©️ todos direitos reservados. 
+France Domingos José, De Angola 🇦🇴 para o mundo💗, ©️ todos direitos reservados. 
