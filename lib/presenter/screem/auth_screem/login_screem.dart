@@ -7,7 +7,9 @@ class LoginScreem extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(),
+          Center(
+            child: Text("Login Page, UBER CLONE ANGOLA"),
+          )
         ],
       ),
     );
