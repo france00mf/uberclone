@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class RegisterScreem extends StatelessWidget {
-  static String page = "page";
+  static String idScreem = "register_screem";
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

@@ -10,7 +10,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Uber Clone BY Angola',
-      initialRoute: LoginScreem.page,
+      initialRoute: LoginScreem.idScreem,
       routes: routes,
       theme: ThemeData(fontFamily: 'Arial'),
     );
