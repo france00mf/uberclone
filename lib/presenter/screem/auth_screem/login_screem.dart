@@ -7,17 +7,15 @@ class LoginScreem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-          child: Column(
-             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                child: Text("Login Page, UBER CLONE ANGOLA"),
-              )
-            ],
-          ),
-        );
-      
-    );
+        body: SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Text("Login Page, UBER CLONE ANGOLA"),
+          )
+        ],
+      ),
+    ));
   }
 }
