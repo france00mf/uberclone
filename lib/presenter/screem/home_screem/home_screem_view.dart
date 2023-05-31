@@ -15,7 +15,6 @@ class _HomeScreemViewState extends State<HomeScreemView> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     msgHome = widget.title;
   }
