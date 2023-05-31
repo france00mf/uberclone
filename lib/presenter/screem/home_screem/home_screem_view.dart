@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../presenter.dart';
+
 class HomeScreemView extends StatefulWidget {
   const HomeScreemView({Key? key, required this.title}) : super(key: key);
 
@@ -25,6 +27,14 @@ class _HomeScreemViewState extends State<HomeScreemView> {
       appBar: AppBar(
         title: Text(widget.title),
         backgroundColor: Colors.black,
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, LoginScreem.idScreem, (route) => false);
+              },
+              icon: Icon(Icons.logout_outlined))
+        ],
       ),
       body: Center(
         child: Column(
