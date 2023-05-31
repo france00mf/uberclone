@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../presenter.dart';
+
 class LoginScreem extends StatelessWidget {
   static String idScreem = "login_screem";
 
@@ -13,7 +15,14 @@ class LoginScreem extends StatelessWidget {
         children: [
           Center(
             child: Text("Login Page, UBER CLONE ANGOLA"),
-          )
+          ),
+          const SizedBox(height: 10),
+          TextButton(
+              onPressed: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, HomeScreemView.idScreem, (route) => false);
+              },
+              child: Text("Continuar")),
         ],
       ),
     ));

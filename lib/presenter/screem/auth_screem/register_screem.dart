@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../presenter.dart';
+
 class RegisterScreem extends StatelessWidget {
   static String idScreem = "register_screem";
   @override
@@ -11,7 +13,14 @@ class RegisterScreem extends StatelessWidget {
           children: [
             Center(
               child: Text("Register Page, UBER CLONE ANGOLA"),
-            )
+            ),
+            const SizedBox(height: 10),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, HomeScreemView.idScreem, (route) => false);
+                },
+                child: Text("Continuar")),
           ],
         ),
       ),
