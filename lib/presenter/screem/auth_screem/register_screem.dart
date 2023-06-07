@@ -14,7 +14,7 @@ class RegisterScreem extends StatelessWidget {
             Center(
               child: Text("Register Page, UBER CLONE ANGOLA"),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             TextButton(
                 onPressed: () {
                   Navigator.pushNamedAndRemoveUntil(
