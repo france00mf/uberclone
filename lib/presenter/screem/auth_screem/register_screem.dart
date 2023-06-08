@@ -12,7 +12,7 @@ class RegisterScreem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: Text("Register Page, UBER CLONE ANGOLA"),
+              child: Text("Register Page, UBER CLONE ANGOLA\nMade by France"),
             ),
             SizedBox(height: 10),
             TextButton(
