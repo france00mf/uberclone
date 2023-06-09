@@ -9,3 +9,6 @@ Facebook -> https://www.facebook.com/pages/France-Domingos-Jos%C3%A9/10134954947
 
 ## Copy Right
 France 😉, De Angola 🇦🇴 para o mundo💗, ©️ todos direitos reservados.
+
+
+
