@@ -1,5 +1,8 @@
 import '../domain.dart';
 
 abstract class Autentication {
-  Future<AccountEntity> auth();
+  Future<AccountEntity> auth({
+    String email,
+    String password
+  });
 }
