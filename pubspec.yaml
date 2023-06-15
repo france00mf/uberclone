@@ -16,6 +16,9 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   firebase_core:
+  mockito: ^5.3.2
+  faker: ^2.0.0
+  test: ^1.21.1
 
 dev_dependencies:
   flutter_test:

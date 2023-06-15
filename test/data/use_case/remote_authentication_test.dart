@@ -1,11 +1,15 @@
 import 'package:flutter_test/flutter_test.dart';
 
 class RemoteAuthentication {
-  Future<void> auth() {
-  
-  }
+  auth() {}
+}
+class HttpClient{
+  request(){}
 }
 
 void main() {
-  test('', () {});
+  test('Should be login with corrects values on httpClient and url'), () async {
+    RemoteAuthentication sut = RemoteAuthentication();
+    await sut.auth();
+  });
 }
