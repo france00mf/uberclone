@@ -14,7 +14,10 @@ class RemoteAuthentication {
 }
 
 class HttpClient {
-  void request({@required String? url, @required String? mathod}) {}
+  void request({@required String? url, @required String? mathod}) {
+    print("Http Client Requues Maked :: ");
+    print(url);
+  }
 }
 
 class HttpClientSpy extends Mock implements HttpClient {}
@@ -36,6 +39,6 @@ void main() {
       () async {
     print(url);
     sut.auth();
-    // verify(httpClient.request());
+    verifyNever(httpClient.request()).called(0);
   });
 }
