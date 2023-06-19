@@ -7,8 +7,9 @@ class RemoteAuthentication {
   final HttpClient? httpClient;
   final String? url;
   RemoteAuthentication({@required this.httpClient, @required this.url});
-  void auth() {
+  void auth() async {
     print("RemoteAuth Url's -> " + url.toString());
+    httpClient!.request(url: url, mathod: 'post');
   }
 }
 
@@ -19,7 +20,8 @@ class HttpClient {
 class HttpClientSpy extends Mock implements HttpClient {}
 
 void main() {
-  test('Should be url correct', () async {
+  test('Should be  RemoteAuthentication call httpClient with url correct',
+      () async {
     Faker faker = Faker();
     final String url = faker.internet.httpUrl();
     HttpClient httpClient = HttpClient();
