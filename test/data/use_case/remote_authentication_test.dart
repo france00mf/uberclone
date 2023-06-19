@@ -1,22 +1,33 @@
-import 'package:flutter_test/flutter_test.dart';
+import 'package:faker/faker.dart';
+import 'package:meta/meta.dart';
+import 'package:mockito/mockito.dart';
+import 'package:test/test.dart';
 
 class RemoteAuthentication {
-  void auth() {}
+  final HttpClient? httpClient;
+  final String? url;
+  RemoteAuthentication({@required this.httpClient, @required this.url});
+  void auth() {
+    print("RemoteAuth Url's -> " + url.toString());
+  }
 }
 
 class HttpClient {
   void request() {}
 }
 
-// class HttpClientSpy extends Mock implements HttpClient {}
+class HttpClientSpy extends Mock implements HttpClient {}
 
 void main() {
-  test(
-      'Should be login with corrects values on RemoteAuthentication and httpClient',
-      () async {
-    RemoteAuthentication sut = RemoteAuthentication();
+  test('Should be url correct', () async {
+    Faker faker = Faker();
+    final String url = faker.internet.httpUrl();
     HttpClient httpClient = HttpClient();
+    RemoteAuthentication sut =
+        RemoteAuthentication(httpClient: httpClient, url: url);
+    print(url);
+
     sut.auth();
-    // verify(httpClient.request()).called(1);
+    // verify(httpClient.request());
   });
 }
