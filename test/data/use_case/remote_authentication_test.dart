@@ -13,7 +13,7 @@ class RemoteAuthentication {
 }
 
 class HttpClient {
-  void request() {}
+  void request({@required String? url, @required String? mathod}) {}
 }
 
 class HttpClientSpy extends Mock implements HttpClient {}
