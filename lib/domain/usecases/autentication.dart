@@ -5,8 +5,8 @@ abstract class Autentication {
 }
 
 class AuthenticatiomParams{
-  String email;
-  String password;
+ late String email;
+ late String password;
   AuthenticatiomParams({
     required String email,
     required String password
