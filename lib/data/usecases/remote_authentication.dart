@@ -1,3 +1,7 @@
+import 'package:meta/meta.dart';
+
+import '../data.dart';
+
 class RemoteAuthentication {
   final HttpClient? httpClient;
   final String? url;

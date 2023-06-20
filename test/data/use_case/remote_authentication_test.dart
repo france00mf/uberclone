@@ -2,6 +2,8 @@ import 'package:faker/faker.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 
+import 'package:uberclone/data/data.dart';
+
 class HttpClientSpy extends Mock implements HttpClient {}
 
 void main() {
