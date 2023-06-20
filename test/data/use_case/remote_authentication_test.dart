@@ -20,12 +20,12 @@ void main() {
 
     httpClient = HttpClientSpy();
     sut = RemoteAuthentication(httpClient: httpClient, url: url);
+    body = AuthenticatiomParams(
+        email: faker.internet.email(), password: faker.internet.password());
   });
 
   test('Should be  RemoteAuthentication call httpClient with correct values',
       () async {
-    body = AuthenticatiomParams(
-        email: faker.internet.email(), password: faker.internet.password());
     print(url);
     await sut.auth(body);
     verify(httpClient.request(url: url, mathod: 'post', body: {
@@ -37,12 +37,10 @@ void main() {
   test('Should be  httpClient call with eny values when returns 400', () async {
     when(httpClient.request(
             url: anyNamed('url'),
-            mathod: anyNamed('method'),
+            mathod: anyNamed('mathod'),
             body: anyNamed('body')))
         .thenThrow(HttpError.badRequest);
 
-    body = AuthenticatiomParams(
-        email: faker.internet.email(), password: faker.internet.password());
     print(url);
     final future = sut.auth(body);
     expect(future, throwsA(DomainError.unexpected));
