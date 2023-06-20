@@ -3,7 +3,7 @@ import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 
 import 'package:uberclone/data/data.dart';
-import 'package:uberclone/domain/usecases/autentication.dart';
+import 'package:uberclone/domain/domain.dart';
 
 class HttpClientSpy extends Mock implements HttpClient {}
 
@@ -32,5 +32,19 @@ void main() {
       'email': faker.internet.email(),
       'password': faker.internet.password()
     }));
+  });
+
+  test('Should be  httpClient call with eny values when returns 400', () async {
+    when(httpClient.request(
+            url: anyNamed('url'),
+            mathod: anyNamed('method'),
+            body: anyNamed('body')))
+        .thenThrow(HttpError.badRequest);
+
+    body = AuthenticatiomParams(
+        email: faker.internet.email(), password: faker.internet.password());
+    print(url);
+    final future = sut.auth(body);
+    expect(future, throwsA(DomainError.unexpected));
   });
 }
