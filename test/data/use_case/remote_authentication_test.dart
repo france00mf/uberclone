@@ -8,7 +8,7 @@ class RemoteAuthentication {
   final String? url;
 
   RemoteAuthentication({@required this.httpClient, @required this.url});
-  void auth(Map? body) async {
+  Future<dynamic> auth(Map? body) async {
     print("RemoteAuth Url's -> " + url.toString());
     await httpClient!.request(url: url, mathod: 'post', body: body);
   }
@@ -41,7 +41,7 @@ void main() {
   test('Should be  RemoteAuthentication call httpClient with correct values',
       () async {
     print(url);
-    sut.auth(body);
+    await sut.auth(body);
     verify(httpClient.request(url: url, mathod: 'post', body: body));
   });
 }
