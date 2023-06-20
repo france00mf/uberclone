@@ -9,7 +9,7 @@ class RemoteAuthentication {
 
   RemoteAuthentication({@required this.httpClient, @required this.url});
   Future<dynamic> auth(AuthenticatiomParams params) async {
-    Map body = {'email': params.email, 'password': params.password};
+    final body = RemoteAuthenticationParams.fromDomain(params).toJson();
     print("RemoteAuth Url's -> " + url.toString());
     await httpClient!.request(url: url, mathod: 'post', body: body);
   }
