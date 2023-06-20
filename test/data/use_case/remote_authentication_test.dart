@@ -38,7 +38,7 @@ void main() {
     sut = RemoteAuthentication(httpClient: httpClient, url: url, body: body);
   });
 
-  test('Should be  RemoteAuthentication call httpClient with url correct',
+  test('Should be  RemoteAuthentication call httpClient with correct values',
       () async {
     print(url);
     sut.auth();
