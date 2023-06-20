@@ -6,12 +6,11 @@ import 'package:test/test.dart';
 class RemoteAuthentication {
   final HttpClient? httpClient;
   final String? url;
-  final Map? body;
-  RemoteAuthentication(
-      {@required this.httpClient, @required this.url, @required this.body});
-  void auth() async {
+
+  RemoteAuthentication({@required this.httpClient, @required this.url});
+  void auth(Map? body) async {
     print("RemoteAuth Url's -> " + url.toString());
-    await httpClient!.request(url: url, mathod: 'post');
+    await httpClient!.request(url: url, mathod: 'post', body: body);
   }
 }
 
@@ -26,23 +25,23 @@ void main() {
   late final String url;
   late HttpClientSpy httpClient;
   late RemoteAuthentication sut;
-  late Map? body = {
-    'email': faker.internet.email(),
-    'password': faker.internet.password()
-  };
+  late Map? body;
 
   setUp(() {
     faker = Faker();
     url = faker.internet.httpUrl();
+    body = {
+      'email': faker.internet.email(),
+      'password': faker.internet.password()
+    };
     httpClient = HttpClientSpy();
-    sut = RemoteAuthentication(httpClient: httpClient, url: url, body: body);
+    sut = RemoteAuthentication(httpClient: httpClient, url: url);
   });
 
   test('Should be  RemoteAuthentication call httpClient with correct values',
       () async {
     print(url);
-    sut.auth();
-    // verifyNever(httpClient.request()).called(0);
-    verify(httpClient.request(url: url, mathod: 'post'));
+    sut.auth(body);
+    verify(httpClient.request(url: url, mathod: 'post', body: body));
   });
 }
