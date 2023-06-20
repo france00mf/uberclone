@@ -1,3 +1,5 @@
+import 'package:meta/meta.dart';
+
 import '../domain.dart';
 
 abstract class Autentication {
@@ -5,7 +7,7 @@ abstract class Autentication {
 }
 
 class AuthenticatiomParams {
-  late String email;
-  late String password;
-  AuthenticatiomParams({required String email, required String password});
+  final String? email;
+  final String? password;
+  AuthenticatiomParams({@required this.email, @required this.password});
 }
