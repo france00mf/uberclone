@@ -1,5 +1,4 @@
 import 'package:faker/faker.dart';
-import 'package:meta/meta.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
 
@@ -12,10 +11,6 @@ class RemoteAuthentication {
     print("RemoteAuth Url's -> " + url.toString());
     await httpClient!.request(url: url, mathod: 'post', body: body);
   }
-}
-
-abstract class HttpClient {
-  request({@required String? url, @required String? mathod, Map? body});
 }
 
 class HttpClientSpy extends Mock implements HttpClient {}
