@@ -14,11 +14,11 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: 
   firebase_core:
-  mockito: ^5.3.2
-  faker: ^2.0.0
-  test: ^1.21.1
+  mockito: 
+  faker: 
+  test: 
 
 dev_dependencies:
   flutter_test:
